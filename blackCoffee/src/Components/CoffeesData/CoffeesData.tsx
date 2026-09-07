@@ -21,9 +21,9 @@ export default function CoffeesData({ coffeesDataPromise }: CoffeesDataProps) {
   return (
     <>
       <div className=" text-black p-4 gap-4 col-span-8 lg:col-span-6 grid md:grid-cols-2 lg:grid-cols-2">
-        {coffeesData.map((coffee) => (
+        {coffeesData.map((coffee)=> (
           <Card
-            coffee={coffee}
+            coffee ={coffee}
             key={coffee.id}
             handleAddToCart={handleAddToCart}
           />

@@ -1,8 +1,10 @@
 import { Suspense } from "react";
 import type { CoffeeDataType } from "./coffeeDataType";
-import CoffeesData from "./Components/CoffeesData/CoffeesData";
+
 import Navbar from "./Components/Navbar/Navbar";
 import Banner from "./Components/Banner/Banner";
+import Footer from "./Components/Footer/Footer";
+import CoffeesData from "./Components/CoffeesData/CoffeesData";
 
 function App() {
   const coffeesDataPromise = async (): Promise<CoffeeDataType[]> => {
@@ -19,7 +21,7 @@ function App() {
           <CoffeesData coffeesDataPromise={coffeesDataPromise()} />
         </Suspense>
       </div>
-      <div className="bg-amber-950 p-10">Footer</div>
+      <div><Footer/></div>
     </>
   );
 }
